@@ -41,6 +41,7 @@ game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
 
 
 
+
 _G.Loop = true
 while _G.Loop and task.wait() do
     local args = {
@@ -55,7 +56,7 @@ while _G.Loop and task.wait() do
 end
 
 _G.Loop = true
-while _G.Loop and task.wait(10) do
+while _G.Loop and task.wait(3.0) do
     local args = {
         [1] = {
             ["Action"] = "Sold"
@@ -63,6 +64,4 @@ while _G.Loop and task.wait(10) do
     }
     
     game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
-    
 end
-
