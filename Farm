@@ -26,15 +26,15 @@ end
 
 _G.Loop = true
 while _G.Loop and task.wait(5) do
-    local args = {
-        [1] = {
-            ["Action"] = "Sold"
-        }
+local args = {
+    [1] = {
+        ["Action"] = "Sold"
     }
-    
-    game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
-end
+}
 
+game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+
+end
 
 
 
