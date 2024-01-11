@@ -11,40 +11,6 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
 end
 
-local args = {
-    [1] = {
-        ["Action"] = "EquipTool",
-        ["ToolName"] = "Large Backpack"
-    }
-}
-
-game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
-end
-
-
-local args = {
-    [1] = {
-        ["Action"] = "EquipTool",
-        ["ToolName"] = "Cyber Sword"
-    }
-}
-
-game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
-end
-
-local args = {
-    [1] = {
-        ["Action"] = "EquipTool",
-        ["ToolName"] = "Cyber Pickaxe"
-    }
-}
-
-game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
-end
-
-
-
-
 _G.Loop = true
 while _G.Loop and task.wait() do
     local args = {
@@ -57,6 +23,18 @@ while _G.Loop and task.wait() do
     
     game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
 end
+
+_G.Loop = true
+while _G.Loop and task.wait(5) do
+    local args = {
+        [1] = {
+            ["Action"] = "Sold"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+end
+
 
 
 
