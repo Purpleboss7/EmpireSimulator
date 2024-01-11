@@ -55,7 +55,7 @@ while _G.Loop and task.wait() do
 end
 
 _G.Loop = true
-while _G.Loop and task.wait() do
+while _G.Loop and task.wait(10) do
     local args = {
         [1] = {
             ["Action"] = "Sold"
