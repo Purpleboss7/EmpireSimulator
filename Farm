@@ -1,0 +1,58 @@
+_G.Loop = true
+while _G.Loop and task.wait() do
+local args = {
+    [1] = {
+        ["Type"] = "Stone",
+        ["Action"] = "InstanceCollected",
+        ["Count"] = 100
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+end
+
+local args = {
+    [1] = {
+        ["Action"] = "EquipTool",
+        ["ToolName"] = "Large Backpack"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+
+
+local args = {
+    [1] = {
+        ["Action"] = "EquipTool",
+        ["ToolName"] = "Cyber Sword"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+
+
+
+_G.Loop = true
+while _G.Loop and task.wait() do
+    local args = {
+        [1] = {
+            ["Type"] = "EmeraldPice3",
+            ["Action"] = "InstanceCollected",
+            ["Count"] = 100
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+end
+
+_G.Loop = true
+while _G.Loop and task.wait() do
+    local args = {
+        [1] = {
+            ["Action"] = "Sold"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+    
+end
