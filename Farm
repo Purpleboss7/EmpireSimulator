@@ -1,40 +1,31 @@
-_G.Loop = true
-while _G.Loop and task.wait() do
-local args = {
-    [1] = {
-        ["Type"] = "Stone",
-        ["Action"] = "InstanceCollected",
-        ["Count"] = 100
-    }
-}
-
-game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+-- Função Sold
+function Sold()
+    while true do
+        wait(5) -- Espera por 5 segundos
+        -- Adicione aqui o código que deseja executar a cada 5 segundos
+        print("Sold function executada a cada 5 segundos")
+    end
 end
 
-_G.Loop = true
-while _G.Loop and task.wait() do
-    local args = {
-        [1] = {
-            ["Type"] = "EmeraldPice3",
-            ["Action"] = "InstanceCollected",
-            ["Count"] = 100
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+-- Função Stone
+function Stone()
+    while true do
+        -- Adicione aqui o código que deseja executar rapidamente em um loop
+        print("Stone function em loop rápido")
+        wait(0) 
+    end
 end
 
-_G.Loop = true
-while _G.Loop and task.wait(5) do
-local args = {
-    [1] = {
-        ["Action"] = "Sold"
-    }
-}
-
-game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
-
+-- Função EmeraldPice3
+function EmeraldPice3()
+    while true do
+        -- Adicione aqui o código que deseja executar rapidamente em um loop
+        print("EmeraldPice3 function em loop rápido")
+        wait(0) -- Aguarda imediatamente, o mais rápido possível
+    end
 end
 
-
-
+-- Iniciar as funções em threads separadas
+spawn(Sold)
+spawn(Stone)
+spawn(EmeraldPice3)
