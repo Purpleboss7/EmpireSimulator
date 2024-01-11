@@ -1,4 +1,8 @@
+_G.Loop = true
+while _G.Loop and task.wait() do
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Purpleboss7/EmpireSimulator2/main/2"))()
+game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+end
 
 _G.Loop = true
 while _G.Loop and task.wait() do
